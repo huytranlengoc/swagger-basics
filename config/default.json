@@ -1,0 +1,20 @@
+//Default config for my app
+{
+  "express": {
+    "port": "3000",
+    "middleware": ["cors", "body-parser"],
+    "middleware$": ["errors"]
+  },
+  
+  "cors": {
+    "origin": "*"
+  },
+
+  "body-parser": {
+    "json": {}
+  },
+
+  "cluster": {
+    "maxWorkers": 1
+  }
+}
