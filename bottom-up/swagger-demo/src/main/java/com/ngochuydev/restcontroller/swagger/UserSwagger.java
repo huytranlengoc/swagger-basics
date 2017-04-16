@@ -21,7 +21,8 @@ public interface UserSwagger {
 	@ApiOperation(value = "Retrieves all users", notes = "get list of users", response = User.class, responseContainer = "list")
 	@ApiImplicitParams({
 		@ApiImplicitParam(name = "pageSize", value = "Size of  page", required = false, dataType = "string", paramType = "query"),
-		@ApiImplicitParam(name = "pageNumber", value = "Page no", required = false, dataType = "string", paramType = "query") })
+		@ApiImplicitParam(name = "pageNumber", value = "Page no", required = false, dataType = "string", paramType = "query"),
+		@ApiImplicitParam(name = "x-auth-token", value = "token", required = true, dataType = "string", paramType = "header")})
 	ResponseEntity<List<User>> listAllUsers();
 
 	@ApiOperation(value = "User information acquisition", notes = "retrieves information for the specified user.", response = User.class)
@@ -30,6 +31,7 @@ public interface UserSwagger {
 			@ApiResponse(code = 200, message = "get OK", response = User.class) })
 	ResponseEntity<?> getUser(@PathVariable("id") long id);
 
+	@ApiImplicitParam(name = "x-auth-token", value = "token", required = true, dataType = "string", paramType = "header")
 	ResponseEntity<?> createUser(@RequestBody User user, UriComponentsBuilder ucBuilder);
 
 	@ApiOperation(value = "User information acquisition", notes = "retrieves information for the specified user.", response = User.class)

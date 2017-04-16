@@ -1,21 +1,25 @@
-package com.ngochuydev.restcontroller.swagger;
+package com.ngochuydev.restcontroller;
 
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestHeader;
 import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.RestController;
 
 import com.ngochuydev.entity.table.Course;
+import com.ngochuydev.restcontroller.swagger.UserCoursesSwagger;
 
-import io.swagger.annotations.ApiImplicitParam;
-
-public interface UserCoursesSwagger {
-
-	@ApiImplicitParam(name = "x-auth-token", value = "token", required = true, dataType = "string", paramType = "header")
+@RestController
+public class UserCourseController  implements UserCoursesSwagger{
+	
+	@PostMapping("/{userId}/createCourses")
 	public ResponseEntity<?> createCourse(@RequestHeader(value="Accept") String accept,
 			@RequestHeader(value="Accept-Language") String acceptLanguage,
 			@PathVariable("userId") String userId, 
 			@RequestBody Course course, 
-			@RequestParam(value = "status", required = false) String status);
+			@RequestParam(value = "status", required = false) String status) {
+		return ResponseEntity.ok(null);
+	}
 }

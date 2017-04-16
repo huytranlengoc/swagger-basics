@@ -28,7 +28,6 @@ import io.swagger.annotations.Api;
 
 @RestController
 @RequestMapping(value = "/api", produces = MediaType.APPLICATION_JSON_UTF8_VALUE)
-@Api(value = "users", description = "Users API")
 public class UserController implements UserSwagger {
 	
 	public static final Logger logger = LoggerFactory.getLogger(UserController.class);
