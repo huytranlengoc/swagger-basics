@@ -1,0 +1,5 @@
+package com.ngochuydev.entity.table;
+
+public class Course {
+
+}

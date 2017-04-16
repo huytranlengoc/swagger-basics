@@ -30,8 +30,8 @@ public class SwaggerConfiguration {
 	}
 	
 	public ApiInfo appInfo() {
-		return new ApiInfoBuilder().title("SSP api-docs")
-				.description("API document of SSP")
+		return new ApiInfoBuilder().title("Swagger Api-docs")
+				.description("API document")
 				.license("Apache license 2.0")
 				.build();
 	}
