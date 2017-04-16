@@ -1,0 +1,14 @@
+/bottom-up/swagger-demo/bin
+/bottom-up/swagger-demo/.gradle
+/bottom-up/swagger-demo/build/
+/bottom-up/swagger-demo/!gradle/wrapper/gradle-wrapper.jar
+/bottom-up/swagger-demo/target/
+
+### STS ###
+/bottom-up/swagger-demo/.apt_generated
+/bottom-up/swagger-demo/.classpath
+/bottom-up/swagger-demo/.factorypath
+/bottom-up/swagger-demo/.project
+/bottom-up/swagger-demo/.settings
+/bottom-up/swagger-demo/.springBeans
+
